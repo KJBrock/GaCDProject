@@ -14,3 +14,6 @@ vignettes/*.pdf
 
 UCI HAR Dataset/*
 getdata-projectfiles-UCI HAR Dataset.zip
+.Rproj.user
+*.Rproj
+.RData
