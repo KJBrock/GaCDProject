@@ -19,7 +19,10 @@
     
 ### Signals
 
-The value of each signal field has been normalized, and is bounded in [-1,1].
+Acceleration is measured in standard fravity units 'g', and gyroscope values are
+measured in radians/sec.
+
+The value of each signal field has been normalized, and is bounded in [-1,1].  
 
 #### tBodyAcc.mean...X        
 #### tBodyAcc.mean...Y           
