@@ -1,7 +1,16 @@
-library(dplyr)
+## Processing the data
 
-dataDirectory = "UCI HAR Dataset"
-rawDataFile = "getdata-projectfiles-UCI HAR Dataset.zip"
+### Data source
+
+This processing code will work as long as you have either a subirectory of the 
+current directory named "UCI HAR Dataset" with the data files in the 
+unmodified sub-directories or you have a file in the current directory named
+"getdata-projectfiles-UCI HAR Dataset.zip"
+
+In the later case the file will be unzipped by the processing code.
+
+### Processing
+
 
 # If the data directory does not exist and the raw data file does, then
 # unzip the raw data file.
@@ -41,6 +50,9 @@ rawdata <- rbind(testset,trainset)
 # We know that the column names for mean values have a segment that says:
 # "mean...", and the std deviation columns match "std...", so we'll just do a
 # regular expression match on those.
+
+# We're only trying to get the columns which were computed ( either mean() or 
+std() from measurements )
 #
 dataset <- select(rawdata, matches("(mean|std)\\.\\.($|\\.)"))
 
